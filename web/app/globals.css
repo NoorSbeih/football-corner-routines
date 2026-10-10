@@ -204,7 +204,6 @@ caption {
   width: 100%;
   height: auto;
   background: var(--pitch);
-  border: 1px solid var(--pitch-line);
 }
 
 .pitch-line {
@@ -214,16 +213,13 @@ caption {
 }
 
 .pitch-goal {
-  stroke: var(--pitch-line);
-  stroke-width: 3;
-}
-
-.zone-guide {
   fill: none;
   stroke: var(--pitch-line);
-  stroke-width: 1;
-  stroke-dasharray: 3 3;
-  opacity: 0.7;
+  stroke-width: 1.75;
+}
+
+.pitch-spot {
+  fill: var(--pitch-line);
 }
 
 .end-mark {

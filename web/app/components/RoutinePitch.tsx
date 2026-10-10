@@ -5,18 +5,21 @@ const X_MIN = 78;
 const X_MAX = 120;
 const Y_MAX = 80;
 const SCALE = 4.5;
-const PAD = 18;
+const TOP = 16;
+const SIDE = 12;
+const BOTTOM = 10;
 
 function sx(y: number): number {
-  return PAD + (Y_MAX - y) * SCALE;
+  return SIDE + (Y_MAX - y) * SCALE;
 }
 
 function sy(x: number): number {
-  return PAD + (X_MAX - x) * SCALE;
+  return TOP + (X_MAX - x) * SCALE;
 }
 
-const WIDTH = PAD * 2 + Y_MAX * SCALE;
-const HEIGHT = PAD * 2 + (X_MAX - X_MIN) * SCALE;
+const WIDTH = SIDE * 2 + Y_MAX * SCALE;
+const HEIGHT = TOP + (X_MAX - X_MIN) * SCALE + BOTTOM;
+const YARD = SCALE;
 
 function inside(x: number | null, y: number | null): x is number {
   return x != null && y != null && x >= X_MIN && x <= X_MAX && y >= 0 && y <= Y_MAX;
@@ -41,6 +44,16 @@ export function RoutinePitch({
         role="img"
         aria-label={`${team}: ${shots} of ${points.length} corners produced a shot. Dots are first contacts in the attacking third.`}
       >
+        <line className="pitch-line" x1={sx(80)} y1={sy(120)} x2={sx(0)} y2={sy(120)} />
+        <line className="pitch-line" x1={sx(80)} y1={sy(120)} x2={sx(80)} y2={sy(X_MIN)} />
+        <line className="pitch-line" x1={sx(0)} y1={sy(120)} x2={sx(0)} y2={sy(X_MIN)} />
+        <rect
+          className="pitch-goal"
+          x={sx(44)}
+          y={sy(120) - 2 * YARD}
+          width={8 * YARD}
+          height={2 * YARD}
+        />
         <rect
           className="pitch-line"
           x={sx(62)}
@@ -55,21 +68,18 @@ export function RoutinePitch({
           width={(50 - 30) * SCALE}
           height={(120 - 114) * SCALE}
         />
-        <line className="pitch-goal" x1={sx(36)} y1={sy(120)} x2={sx(44)} y2={sy(120)} />
-        <rect
-          className="zone-guide"
-          x={sx(44)}
-          y={sy(114)}
-          width={(44 - 36) * SCALE}
-          height={(114 - 102) * SCALE}
+        <path
+          className="pitch-line"
+          d={`M ${sx(48)} ${sy(102)} A ${10 * YARD} ${10 * YARD} 0 0 1 ${sx(32)} ${sy(102)}`}
+        />
+        <circle className="pitch-spot" cx={sx(40)} cy={sy(108)} r={1.5} />
+        <path
+          className="pitch-line"
+          d={`M ${sx(79)} ${sy(120)} A ${YARD} ${YARD} 0 0 1 ${sx(80)} ${sy(119)}`}
         />
         <path
           className="pitch-line"
-          d={`M ${sx(0)} ${sy(120)} A 8 8 0 0 1 ${sx(8)} ${sy(120) + 8}`}
-        />
-        <path
-          className="pitch-line"
-          d={`M ${sx(80)} ${sy(120)} A 8 8 0 0 0 ${sx(72)} ${sy(120) + 8}`}
+          d={`M ${sx(1)} ${sy(120)} A ${YARD} ${YARD} 0 0 0 ${sx(0)} ${sy(119)}`}
         />
         {points.map((point, index) =>
           inside(point.end_x, point.end_y) ? (
