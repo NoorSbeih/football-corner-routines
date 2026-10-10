@@ -1,5 +1,9 @@
 # Corner routines
 
+[Live site](https://football-corner-routines.vercel.app) · [source](https://github.com/NoorSbeih/football-corner-routines)
+
+![The team table, France's corners, and the Denmark–Tunisia tape](docs/demo.gif)
+
 When a team takes a corner, what do they actually do, and which of those patterns become a shot?
 
 FIFA World Cup 2022, from StatsBomb open data. 569 corners. 27.9% of them produced a shot (159). 12.1% produced that shot from the second ball (69). 12 became goals.
@@ -84,6 +88,4 @@ Open `/` for the team table, a team link for the penalty-box plot, and Match tap
 
 ## Deploy
 
-The site is a static export. In Vercel, set the root directory to `web/`. `npm run build` writes `web/out/` and does not need DuckDB or the Parquet cache, because the JSON is already in `web/public/data/`.
-
-There is no live URL yet. Add it here after the first deploy.
+The live site is [football-corner-routines.vercel.app](https://football-corner-routines.vercel.app). The Vercel project root is `web/`. `npm run build` writes `web/out/`, and `web/vercel.json` publishes that folder with clean URLs, so `/team/771` serves `team/771.html`. The build does not need DuckDB or the Parquet cache, because the JSON is already in `web/public/data/`.
