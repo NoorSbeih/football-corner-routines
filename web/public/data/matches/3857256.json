@@ -1,0 +1,52 @@
+{
+  "match_id": 3857256,
+  "date": "2022-12-02",
+  "stage": "Group Stage",
+  "home_team": "Serbia",
+  "away_team": "Switzerland",
+  "home_team_id": 786,
+  "away_team_id": 773,
+  "home_score": 2,
+  "away_score": 3,
+  "label": "Serbia 2-3 Switzerland",
+  "corners": [
+    {
+      "corner_id": "7e540ecb-50dd-4c63-91da-039187890aad",
+      "period": 1,
+      "minute": 4,
+      "second": 33,
+      "team": "Serbia",
+      "team_id": 786,
+      "taker": "Dušan Tadić",
+      "side": "right",
+      "technique": "outswing",
+      "zone": "penalty_spot",
+      "outcome": "shot_first",
+      "xg": 0.082,
+      "goals": 0,
+      "shot": true,
+      "has_freeze_frame": true,
+      "box_attackers": 5,
+      "box_defenders": 10
+    },
+    {
+      "corner_id": "06afd73c-8db5-4252-b997-a31b675948d9",
+      "period": 1,
+      "minute": 16,
+      "second": 45,
+      "team": "Serbia",
+      "team_id": 786,
+      "taker": "Dušan Tadić",
+      "side": "right",
+      "technique": "outswing",
+      "zone": "edge",
+      "outcome": "cleared",
+      "xg": 0.0,
+      "goals": 0,
+      "shot": false,
+      "has_freeze_frame": true,
+      "box_attackers": 5,
+      "box_defenders": 10
+    }
+  ]
+}

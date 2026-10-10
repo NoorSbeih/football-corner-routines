@@ -1,0 +1,8 @@
+# IDs confirmed from statsbombpy competitions() for the open-data World Cup.
+# country_name International, competition_name "FIFA World Cup",
+# season_name 2022, competition_gender male, competition_youth false.
+competitions:
+  wc2022:
+    name: FIFA World Cup 2022
+    competition_id: 43
+    season_id: 106

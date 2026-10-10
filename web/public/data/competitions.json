@@ -1,0 +1,13 @@
+{
+  "competitions": [
+    {
+      "key": "wc2022",
+      "name": "FIFA World Cup 2022",
+      "competition_id": 43,
+      "season_id": 106,
+      "default_match_id": 3857254,
+      "min_team_n": 15,
+      "min_routine_n": 8
+    }
+  ]
+}

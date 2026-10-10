@@ -1,0 +1,47 @@
+# StatsBomb pitch, attacking team always faces x = length.
+# Locked after plotting FIFA World Cup 2022 corners (see docs/event-fields.md).
+# Tests and SQL both read this file. Do not duplicate the numbers elsewhere.
+
+pitch:
+  length: 120
+  width: 80
+
+# Standard 18-yard box on the 120 x 80 grid.
+penalty_box:
+  x_min: 102
+  y_min: 18
+  y_max: 62
+
+# Six-yard box. Goal posts sit inside it at y = 36 and y = 44.
+six_yard:
+  x_min: 114
+  y_min: 30
+  y_max: 50
+
+# Between the posts. "Central" for the six-yard split and for the penalty-spot corridor.
+goal_mouth:
+  y_min: 36
+  y_max: 44
+
+# Same band as the goal mouth. Wider than this, still inside the penalty box, is the edge.
+central_corridor:
+  y_min: 36
+  y_max: 44
+
+# Complete, outside the penalty box, and within this many yards of the flag.
+# Ground-pass corners with no technique cluster under ~19 yards.
+# Swung deliveries start at ~23 yards. 20 sits in the gap.
+short_corner:
+  max_distance: 20
+
+# After the first contact, later events are not part of the corner.
+sequence:
+  open_play_cutoff_s: 8
+
+# y >= left_y_min is the attacker's left flag (the y = 80 touchline).
+side:
+  left_y_min: 40
+
+sample:
+  min_routine_n: 8
+  min_team_rank_n: 15

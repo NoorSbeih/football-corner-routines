@@ -1,0 +1,52 @@
+{
+  "match_id": 3857255,
+  "date": "2022-12-01",
+  "stage": "Group Stage",
+  "home_team": "Japan",
+  "away_team": "Spain",
+  "home_team_id": 778,
+  "away_team_id": 772,
+  "home_score": 2,
+  "away_score": 1,
+  "label": "Japan 2-1 Spain",
+  "corners": [
+    {
+      "corner_id": "7c51e8b2-852a-43b5-8c2f-d6949e3367f6",
+      "period": 1,
+      "minute": 8,
+      "second": 47,
+      "team": "Spain",
+      "team_id": 772,
+      "taker": "Daniel Olmo Carvajal",
+      "side": "right",
+      "technique": "short",
+      "zone": "short",
+      "outcome": "second_ball_shot",
+      "xg": 0.064,
+      "goals": 0,
+      "shot": true,
+      "has_freeze_frame": true,
+      "box_attackers": 5,
+      "box_defenders": 7
+    },
+    {
+      "corner_id": "4c3db914-d4d8-4061-b042-ba2bdc5ffa47",
+      "period": 1,
+      "minute": 46,
+      "second": 11,
+      "team": "Spain",
+      "team_id": 772,
+      "taker": "Daniel Olmo Carvajal",
+      "side": "right",
+      "technique": "inswing",
+      "zone": "six_yard",
+      "outcome": "cleared",
+      "xg": 0.0,
+      "goals": 0,
+      "shot": false,
+      "has_freeze_frame": false,
+      "box_attackers": null,
+      "box_defenders": null
+    }
+  ]
+}

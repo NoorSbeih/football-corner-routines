@@ -1,0 +1,30 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Data and warehouse — never commit
+data/raw/
+*.duckdb
+*.duckdb.wal
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.vercel/
+web/AGENTS.md
+
+# Local env
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db
